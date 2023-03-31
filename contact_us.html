@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <style>
+        body {
+            background-color: palevioletred;
+        }
+
+        #{
+ align-content: center;
+        }
+
+        nav {
+            background-color: black;
+            padding-bottom: 0;
+        }
+
+        a {
+            padding: 20px;
+            color: aqua;
+            text-decoration-line: none;
+            padding-bottom: 0;
+        }
+
+        form,
+        div {
+            text-align: center;
+            background-color: coral;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+        img {
+            width: 30px;
+            height: auto;
+        }
+
+        a:hover {
+            color: brown;
+        }
+
+        #submit:hover {
+            color: yellow;
+            background-color: black;
+        }
+
+        #submit {
+            border-radius: 25%;
+            background-color: indigo;
+            color: aquamarine;
+        }
+
+         @media screen and (max-width:361px) {
+            h2{
+                font-size: 16px;
+            }
+            img{
+                width: 20;
+                height: auto;
+            }
+        }
+        @media screen and (max-width:497px) {
+            h1{
+                font-size: 60px;
+            }
+            h2{
+                font-size: 35px;
+            }
+            img{
+                width: 25;
+                height: auto;
+            }
+           
+        }
+        @media screen and (max-width:478px) {
+            h1{
+                font-size: 40px;
+            }
+            h2{
+                font-size: 20px;
+            }
+            img{
+                width: 25;
+                height: auto;
+            } 
+        }
+        @media screen and (max-width:449px) {
+            h1{
+                font-size: 40px;
+            }
+            h2{
+                font-size: 28px;
+            }
+            img{
+                width: 25;
+                height: auto;
+            }
+           
+        }
+        @media screen and (max-width:371px) {
+            h1{
+                font-size: 40px;
+            }
+            h2{
+                font-size: 20px;
+            }
+            img{
+                width: 25;
+                height: auto;
+            }
+           
+        }
+       
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2><a href="tempconverter.html" target="_blank">Main Page</a></h2>
+    </nav>
+    <div>
+        <h1>Contact Us</h1>
+        <form>
+            <!-- <label for="name">Name:</label> -->
+            <div>
+                Name : <input type="text" id="name" name="name" required><br><br>
+            </div>
+            <div>
+                Email : <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div>
+                Message : <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            </div>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </div>
+    <hr>
+    <nav class="grid">
+        <h2>
+            <ul>
+                <span><a href="https://www.instagram.com/ayush__1108/" target="_blank"><img
+                            src="https://cdn-icons-png.flaticon.com/512/4138/4138124.png">Instagram</a></li>
+
+                <span><a href="https://twitter.com/AyushGu36931334" target="_blank"><img
+                            src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png"> Twitter</a></li>
+
+                <span><a href="https://www.linkedin.com/in/ayush-gupta-1020a9253/" target="_blank"><img
+                            src="https://cdn-icons-png.flaticon.com/512/145/145807.png">LinkedIn</a></li>
+
+                <span><a href="https://github.com/ayush1108g" target="_blank"><img
+                            src="https://cdn-icons-png.flaticon.com/512/733/733553.png">Github</a></li>
+
+                <span><a href="https://www.facebook.com/profile.php?id=100039059671587" target="_blank"><img
+                            src="https://cdn-icons-png.flaticon.com/512/145/145802.png">Facebook</a></li>
+            </ul>
+        </h2>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 99%;
+            height: auto;
+            margin: auto;
+            padding: 10px;
+        }
+
+        body {
+            margin: 0;
+            height: auto;
+            /* background: hsla(88, 82%, 49%, 0.644); */
+            background: hotpink;
+            border: 3px solid rgb(1, 5, 1);
+        }
+
+        nav {
+            margin: 0;
+            background: rgb(0, 0, 0);
+            border: 2px solid black;
+        }
+
+        a {
+            padding: 20px;
+            border-radius: 10%;
+            text-decoration-color: aliceblue;
+            color: antiquewhite;
+        }
+
+        .a1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .a {
+            height: auto;
+            margin: 15px;
+            border: 3px solid rgb(1, 5, 1);
+            text-decoration-color: aqua;
+            text-align: center;
+            padding: 5px;
+            background-color: cyan;
+            float: right;
+        }
+
+        h1 {
+            color: rgb(112, 114, 235);
+            font-size: 50px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            text-shadow: 3px 3px rgb(8, 7, 10);
+            text-decoration:double;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+
+        .x {
+            text-align: center;
+        }
+
+        .ab {
+            text-size-adjust: 100px;
+            margin: 0;
+        }
+
+        .Submit {
+            text-decoration-color: beige;
+            background: rgb(26, 74, 179);
+            box-shadow: 2px 2px black;
+            border-radius: 20px;
+        }
+
+        #newinput {
+            background: hsla(88, 82%, 49%, 0.404);
+            border: 0;
+        }
+
+        .a2 {
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+        }
+
+        @media screen and (min-width:420px) {
+            .a {
+                width: 45%;
+                height: 60%;
+            }
+        }
+
+        @media screen and (max-width:420px) {
+            .a {
+                width: 90%;
+                padding: 0;
+            }
+
+            .img {
+                width: 30px;
+                height: auto;
+            }
+
+            h3 {
+                font-size: 14px;
+            }
+
+            a {
+                padding: 10px;
+            }
+        }
+
+        @media screen and (max-width:320px) {
+            .a {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .xx,
+            .ab,
+            .a {
+                padding-left: 0;
+            }
+
+            h3 {
+                font-size: 10px;
+            }
+
+            a {
+                padding: 5px;
+            }
+        }
+
+        .a123 {
+            align-content: center;
+        }
+
+        .Submit:hover {
+            color: pink;
+            /* background: orange; */
+        }
+
+        img {
+            width: 50px;
+            height: auto;
+            margin: 20px;
+            margin-bottom: 0;
+            border-radius: 25%;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 60px;
+        }
+
+        .gh:hover {
+            color: rgba(111, 114, 235, 0.767);
+            text-shadow: 3 3 darkmagenta;
+        }
+
+        #but {
+
+            background: green;
+            border-radius: 50%;
+            box-shadow: 2px 2px black;
+        }
+        h1{
+            text-decoration: underline;
+        }
+        #but:hover {
+            color: blue;
+            background: orange;
+        }
+        .zm{
+            text-decoration:double;
+        }
+        .zm:hover{
+            color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="a2">
+            <h3><a class="zm" href="#">Home</a>
+                <a class="zm" href="#">Login/SignUp</a>
+                <a class="zm" href="contact_us.html" target="_blank">Contact Us</a></h2>
+        </nav>
+    </header>
+
+    <div class="a1">
+        <h1 class="gh"><img class="img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5_Wq0EqTCRfNdnclJmH6zhAKCRFmjhNUX5w&usqp=CAU"
+                alt="....">
+            Temperature Convertor</h1>
+    </div>
+    <br>
+    <div class="a">
+        <div class="x">
+            <h3><b><i>Select your Conversion Units</i></b></h3>
+        </div>
+        <div class="ab">
+            <div> Convert from
+                <select id="sel1">
+                    <option value="Select">select</option>
+                    <option value="Celsius">°Celsius</option>
+                    <option value="Fahrenheit">°Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                    <option value="Rankine">°Rankine</option>
+                </select>
+                to
+                <select id="sel2">
+                    <option value="Select">select</option>
+                    <option value="Celsius">°Celsius</option>
+                    <option value="Fahrenheit">°Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                    <option value="Rankine">°Rankine</option>
+                </select>
+                <button id="but" onclick="swap()"> ↔ </button>
+            </div>
+
+            <div class"xx">
+                Enter Value : <input type="number" id="input" value="" placeholder="Enter Temp" required size="number">
+            </div>
+
+            <div>
+                <input class="Submit" id="a23" type="Submit" value="Submit Now" onclick="func()">
+
+            </div>
+            <em>
+                <p id="p"></p>
+            </em>
+
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+    <div class="a123">
+        <p><b><em>Use</em></b></p>
+        <p>Temperature conversions are performed by formula, which depends on the two temperature
+            scales you are converting between. </p>
+
+        <p>For example, to convert 80 degrees Celsius to Fahrenheit, we put the numbers into the formula
+            as : °F = °C * 9/5 + 32</p>
+
+        <p>°F = 80 * 9/5 + 32</p>
+        <p>°F = 144 + 32</p>
+        <p>°F = 176</p>
+
+        <p>80 degrees Celsius is equal to 176 degrees Fahrenheit.</p>
+
+        <p><b>Formulas for Converting Temperature Scales:</b></p>
+        <p>The following temperature conversion formulas are used to convert from one temperature scale to another.</p>
+        <b>Celsius Temperature Conversion Formula</b>
+        <table class="tg" border="blue">
+            <tr>
+                <th class="tg-0l">Celsius to Fahrenheit Conversion</th>
+                <td class="tg-0lax">°F = °C × 9/5 + 32</th>
+            </tr>
+
+            <tr>
+                <th class="tg-0l">Celsius to Kelvin Conversion</td>
+                <td class="tg-0lax">K = °C + 273.15</td>
+            </tr>
+            <tr>
+                <th class="tg-0l">Celsius to Rankine Conversion</td>
+                <td class="tg-0lax">°R = °C × 9/5 + 491.67</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <b>Fahrenheit Temperature Conversion Formula</b>
+        <table class="tg" border="blue">
+            <tr>
+                <th class="tg-0l">Fahrenheit to Celsius Conversion</th>
+                <td class="tg-0lax">°C = (°F − 32) × 5/9</th>
+            </tr>
+
+            <tr>
+                <th class="tg-0l">Fahrenheit to Kelvin Conversion</td>
+                <td class="tg-0lax">K = (°F + 491.67) × 5/9</td>
+            </tr>
+            <tr>
+                <th class="tg-0l">Fahrenheit to Rankine Conversion</td>
+                <td class="tg-0lax">°R = °F + 491.67</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <b>Kelvin Temperature Conversion Formula</b>
+        <table class="tg" border="blue">
+            <tr>
+                <th class="tg-0l">Kelvin to Celsius Conversion</th>
+                <td class="tg-0lax">°C = K − 273.15</th>
+            </tr>
+
+            <tr>
+                <th class="tg-0l">Kelvin to Fahrenheit Conversion</td>
+                <td class="tg-0lax">°F = K × 9/5 − 491.67</td>
+            </tr>
+            <tr>
+                <th class="tg-0l">Kelvin to Rankine Conversion</td>
+                <td class="tg-0lax">°R = K × 9/5</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <b>Rankine Temperature Conversion Formula</b>
+        <table class="tg" border="blue">
+            <tr>
+                <th class="tg-0l">Rankine to Celsius Conversion</th>
+                <td class="tg-0lax">°C = °R × 5/9 − 273.15</th>
+            </tr>
+
+            <tr>
+                <th class="tg-0l">Rankine to Fahrenheit Conversion</td>
+                <td class="tg-0lax">°F = °R − 491.67</td>
+            </tr>
+            <tr>
+                <th class="tg-0l">Kelvin Conversion</td>
+                <td class="tg-0lax">K = °R × 5/9</td>
+            </tr>
+        </table>
+
+    </div>
+    <br><br><br>
+    <footer>
+        <nav>
+            <a class="zm" href="#">Privacy policy</a>
+            <a class="zm" href="#">FAQ</a>
+            <a class="zm" href="#">Terms and condition</a>
+            <a class="zm" href="#">&copy Copyright</a>
+            <a class="zm" href="contact_us.html" target="_blank">Contact Us</a></h2>
+
+        </nav>
+    </footer>
+
+    <script>
+        var input = document.getElementById("input");
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("a23").click();
+            }
+        });
+
+        function swap() {
+            let b = document.getElementById("sel1").value;
+            let c = document.getElementById("sel2").value;
+
+            document.getElementById("sel1").value = c;
+            document.getElementById("sel2").value = b;
+        }
+        function func() {
+            let a = document.getElementById("input").value;
+            let b = document.getElementById("sel1").value;
+            let c = document.getElementById("sel2").value;
+            let d = a;
+            if (b == "Select" || c == "Select" || a == "")
+                alert("All Fields are required");
+            else {
+
+                // document.getElementById("newinput").type="text";
+                if (b == c) {
+                    d = a;
+                }
+                else if (b == "Celsius") {
+                    if (c == "Fahrenheit")
+                        d = (9 * a / 5) + 32;
+                    else if (c == "Kelvin")
+                        d = (273.15) + a * 1;
+                    else if (c == "Rankine")
+                        d = a * 9 / 5 + 491.67;
+                }
+                else if (b == "Fahrenheit") {
+                    if (c == "Celsius")
+                        d = (5 / 9) * (a - 32);
+                    else if (c == "Kelvin")
+                        d = (5 / 9) * (a - 32) + 273.15;
+                    else if (c == "Rankine")
+                        d = ((a * 1 - 32)) + 491.67;
+                }
+                else if (b == "Kelvin") {
+                    if (c == "Fahrenheit")
+                        d = (9 * (a - 273.15)) / 5 + 32;
+                    if (c == "Celsius")
+                        d = a - 273.15;
+                    else if (c == "Rankine")
+                        d = ((a - 273.15) * 9 / 5) + 491.67;
+                }
+                else if (b == "Rankine") {
+                    if (c == "Celsius")
+                        d = (a - 491.67) * 5 / 9;
+                    if (c == "Fahrenheit")
+                        d = ((a - 491.67)) + 32;
+                    else if (c == "Kelvin")
+                        d = (273.15) + (a - 491.67) * 5 / 9 * 1;
+                }
+
+                document.getElementById("p").innerHTML = a + ' °' + b + '  =  ' + d + ' °' + c;
+                let z = document.getElementById("p");
+                z.style.background = 'orange';
+                z.style.borderRadius = '15%';
+            }
+        }
+        window.onscroll = function () { myFunction() };
+
+        //Sticky Navbar
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+
+</html>
